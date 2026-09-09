@@ -1,0 +1,27 @@
+PRACTICAL 5 – FILE COPY USING SYSTEM CALLS
+
+System Calls Used:
+
+1. open()
+   Opens the source and destination files.
+
+2. read()
+   Reads data from the source file into a buffer.
+
+3. write()
+   Writes the data from the buffer into the destination file.
+
+4. close()
+   Closes both files after the copying is completed.
+
+User Space to Kernel Space:
+
+The C program runs in user space. When it calls open(), read(), write(), or close(), a system call transfers control to the kernel. The kernel performs the required file operation and returns the result to the program.
+
+Sequence:
+
+open() → read() → write() → close()
+
+Result:
+
+The contents of input3.txt were successfully copied to output3.txt.
