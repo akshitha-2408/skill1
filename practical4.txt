@@ -1,0 +1,30 @@
+PRACTICAL 4 – STRACE SYSTEM CALL ANALYSIS
+
+Command:
+strace cat sample.txt
+
+System Calls and Kernel Services:
+
+1. execve()
+   Executes the cat program.
+
+2. openat()
+   Opens sample.txt for reading.
+
+3. read()
+   Reads the contents of sample.txt from the file.
+
+4. write()
+   Writes the contents to standard output (screen).
+
+5. close()
+   Closes the opened file.
+
+6. exit_group()
+   Terminates the cat process.
+
+Sequence:
+execve() → openat() → read() → write() → read() → close() → exit_group()
+
+Output:
+Operating Systems
