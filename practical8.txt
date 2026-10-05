@@ -1,0 +1,36 @@
+PRACTICAL 8: Copy-on-Write (COW) Memory Experiment
+
+Aim:
+To demonstrate Copy-on-Write memory behavior using fork() and observe
+memory usage of parent and child processes.
+
+Program:
+cow_demo.c
+
+Compilation:
+gcc -Wall -Wextra -g cow_demo.c -o cow_demo
+
+Execution:
+./cow_demo
+
+Process IDs observed:
+Parent PID: 814
+Child PID: 815
+
+Parent memory:
+VmSize: 105092 kB
+VmRSS: 104072 kB
+
+Child memory:
+VmSize: 105092 kB
+VmRSS: 103208 kB
+
+Observation:
+The child process is created using fork(). Initially, the parent and child
+share the same physical memory pages. When the child modifies the memory,
+Copy-on-Write causes the modified pages to become private to the child.
+
+Conclusion:
+The experiment demonstrates the Copy-on-Write mechanism used by the
+operating system after fork(). The parent and child initially share memory,
+and private copies are created when modifications occur.
