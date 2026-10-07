@@ -1,1 +1,2 @@
-Operating Systems Lab Program
+This output is redirected to output.txt
+Hello from Practical 9!

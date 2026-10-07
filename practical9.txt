@@ -1,0 +1,43 @@
+PRACTICAL 9
+File Copy Using Low-Level Linux I/O and Standard Library I/O
+I/O Redirection Using dup2()
+
+Experiment 1: File Copy
+
+1. Low-Level Linux I/O
+   Program: copy_lowlevel.c
+   Functions used:
+   open(), read(), write(), lseek(), close()
+
+2. Standard Library I/O
+   Program: copy_stdio.c
+   Functions used:
+   fopen(), fread(), fwrite(), fseek(), ftell(), fclose()
+
+3. Testing
+   Source file: input.dat
+   Low-level output: output_low.dat
+   Standard library output: output_stdio.dat
+
+4. Verification
+   cmp was used to verify that the copied files were identical.
+   sha256sum was used to compare the checksums of the source
+   and copied files.
+
+5. Performance
+   The execution time of both implementations was measured
+   using the time command.
+
+Experiment 2: I/O Redirection Using dup2()
+
+1. Output Redirection
+   Program: redirect_output.c
+   Standard output was redirected to output.txt using dup2().
+
+2. Input Redirection
+   Program: redirect_input.c
+   Standard input was redirected from input.txt using dup2().
+
+Result:
+Both file-copy implementations and both I/O redirection
+experiments were executed successfully.
