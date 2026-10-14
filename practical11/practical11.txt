@@ -1,0 +1,17 @@
+PRACTICAL 11: POSIX THREADS AND RACE CONDITIONS
+
+**Experiment 1: Multithreaded Counter and Race Condition**
+
+**Aim:** To develop a multithreaded C program using POSIX threads and demonstrate a race condition when multiple threads update a shared counter.
+
+**Programs:** race_counter.c and safe_counter.c
+
+**Result:** Four threads were created using pthread_create() and synchronized with pthread_join(). Without a mutex, concurrent counter updates could produce an incorrect result. Using pthread_mutex_lock() and pthread_mutex_unlock() protected the critical section and produced the expected counter value of 4000000.
+
+**Experiment 2: Synchronizing a Multithreaded Counter Using Mutex Locks**
+
+**Aim:** To compare synchronized counter results and execution time.
+
+**Program:** mutex_counter.c
+
+**Result:** The mutex-protected program produced the expected counter value of 4000000 and displayed its execution time. The experiment demonstrated that mutex locks improve correctness but introduce synchronization overhead.
