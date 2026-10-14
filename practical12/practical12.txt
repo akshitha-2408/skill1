@@ -1,0 +1,39 @@
+PRACTICAL 12
+
+Experiment 1: Producer-Consumer Problem Using POSIX Threads and Counting Semaphores
+
+Aim:
+To implement the Producer-Consumer problem using POSIX threads and counting semaphores.
+
+Semaphores:
+1. empty: Counts empty buffer slots.
+2. full: Counts filled buffer slots.
+3. mutex: Protects shared buffer operations.
+
+Result:
+The producer-consumer program produced and consumed 1000000 items.
+Synchronization was correct when the expected, produced, and consumed counts matched.
+
+Experiment 2: Deadlock Detection and Prevention Using Resource Ordering
+
+Aim:
+To demonstrate deadlock and prevent it using resource ordering.
+
+Four Necessary Conditions for Deadlock:
+1. Mutual Exclusion
+2. Hold and Wait
+3. No Preemption
+4. Circular Wait
+
+Deadlock Demonstration:
+Thread 1 locks Resource A and waits for Resource B.
+Thread 2 locks Resource B and waits for Resource A.
+This can cause deadlock.
+
+Deadlock Prevention:
+Both threads acquire Resource A before Resource B.
+This eliminates circular wait and prevents deadlock.
+
+Conclusion:
+Counting semaphores and mutexes synchronize producer-consumer operations.
+Resource ordering prevents deadlock by eliminating circular wait.
