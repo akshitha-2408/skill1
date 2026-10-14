@@ -1,0 +1,17 @@
+PRACTICAL 10
+
+Experiment 1: Investigating Inodes, Hard Links and Symbolic Links
+
+Aim: To investigate inode structures and understand the behavior of hard links and symbolic links in Linux.
+
+Commands used: `ls -i`, `ls -li`, `stat`, `ln`, `ln -s`, `readlink`, and `find`.
+
+Result: The inode numbers and link counts were examined. Hard links shared the same inode, while symbolic links had their own inode. The behavior of links after deleting a filename was observed.
+
+Experiment 2: File I/O Using mmap() and Comparison with read()/write()
+
+Aim: To implement file modification using memory-mapped I/O and traditional read()/write() system calls.
+
+Programs: `mmap_file.c` and `read_write_file.c`.
+
+Result: Both programs successfully modified the first five characters of `data.txt` to `HELLO`. The operation using `mmap()` and the operation using `read()`/`write()` were executed and observed.
